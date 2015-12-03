@@ -3,14 +3,14 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-	public PlayerMovement thePlayer; 
+	public PlayerController thePlayer; 
 
 	private Vector3 lastPlayerPosition; 
 	private float distanceToMove; 
 
 	// Use this for initialization
 	void Start () {
-		thePlayer = FindObjectOfType<PlayerMovement> (); 
+		thePlayer = FindObjectOfType<PlayerController> (); 
 		lastPlayerPosition = thePlayer.transform.position;
 	}
 	

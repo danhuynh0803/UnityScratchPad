@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{100AE41E-9853-00A1-0814-C759729749EB}</ProjectGuid>
+	<ProjectGuid>{03B58A83-137F-0516-A822-B4F777146B50}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,26 +46,36 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" />
+     <Compile Include="Assets\LiquidPhysics\Scripts\ParticleGenerator.cs" />
+     <Compile Include="Assets\Scripts\AimMouse.cs" />
      <Compile Include="Assets\Scripts\ApplyGrav.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Chaining.cs" />
+     <Compile Include="Assets\Scripts\DestroyPlatform.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyDeath.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\GravityObjects.cs" />
+     <Compile Include="Assets\Scripts\KillParticle.cs" />
+     <Compile Include="Assets\Scripts\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\KillProjectile.cs" />
+     <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ProjectileController.cs" />
      <Compile Include="Assets\Scripts\SpringController.cs" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_hud.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_players.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_ground.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_tiles.xml" />
+     <None Include="Assets\LiquidPhysics\Shaders\Metaballs_Multiple.shader" />
      <None Include="Assets\PlatformerAssets\License.txt" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_items.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_complete.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_enemies.xml" />
+     <None Include="Assets\README.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

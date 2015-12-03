@@ -17,9 +17,4 @@ public class ProjectileController : MonoBehaviour {
 		myRb2d.velocity = new Vector2(speed, myRb2d.velocity.y); 
 	}
 	
-	void OnTriggerEnter2D(Collider2D other) 
-	{ 
-		if(other.tag != "Player")
-			Destroy (this.gameObject); 
-	} 
 }
