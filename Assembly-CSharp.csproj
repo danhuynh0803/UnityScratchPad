@@ -48,8 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\LiquidPhysics\Scripts\DynamicParticle.cs" />
      <Compile Include="Assets\LiquidPhysics\Scripts\ParticleGenerator.cs" />
+     <Compile Include="Assets\Orc Warrior\Scripts\MouseController.cs" />
      <Compile Include="Assets\Scripts\AimMouse.cs" />
      <Compile Include="Assets\Scripts\ApplyGrav.cs" />
+     <Compile Include="Assets\Scripts\BossController.cs" />
+     <Compile Include="Assets\Scripts\BossMovement.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Chaining.cs" />
@@ -57,11 +60,13 @@
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyDeath.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\GrabItem.cs" />
      <Compile Include="Assets\Scripts\GravityObjects.cs" />
      <Compile Include="Assets\Scripts\KillParticle.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\KillProjectile.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\OrcDamage.cs" />
      <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ProjectileController.cs" />

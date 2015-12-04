@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour {
+public class BossMovement : MonoBehaviour {
 
 	public float speed = 5.0f;  				// Control enemy movement speed
 	private Animator myAnimator;  				// Control animations 
@@ -11,16 +11,17 @@ public class EnemyMovement : MonoBehaviour {
 	public LayerMask whatIsWall; 				
 	private Rigidbody2D myRigidBody; 	
 	private Collider2D myCollider; 
+	private EdgeCollider2D wallCollider; 
 	
 	float h; 									// Horizontal movement direction
 	Vector3 playerPos; 							// Player position
 	Vector3 enemyPos; 							// Enemy position 
 	float distance;								// Distance from player and enemy 
-
+	
 	PlayerController player; 
 	LevelController levelController; 
 	
-	 
+	
 	
 	// Use this for initialization
 	void Start() 
@@ -28,6 +29,7 @@ public class EnemyMovement : MonoBehaviour {
 		myRigidBody = GetComponent<Rigidbody2D> (); 
 		myAnimator = GetComponent<Animator> (); 		
 		myCollider = GetComponent<Collider2D>();
+		wallCollider = GetComponent<EdgeCollider2D>();
 		player = FindObjectOfType<PlayerController>();
 		levelController = FindObjectOfType<LevelController>();
 	}
@@ -36,13 +38,19 @@ public class EnemyMovement : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		if (facingLeft) { 
-			h = -1; 	
+			h = -1; 
 		} 
 		else {
 			h = 1;
 		}
+		
 		Vector3 movement = new Vector3 (h*speed, transform.position.y, transform.position.z); 
 		myRigidBody.velocity = movement; 
+		
+		if (speed != 0) 
+			myAnimator.SetBool("isMoving", true);
+		else 
+			myAnimator.SetBool ("isMoving", false);
 	}
 	
 	// Update is called once per frame
@@ -52,20 +60,12 @@ public class EnemyMovement : MonoBehaviour {
 		playerPos = player.transform.position; 
 		distance = Vector3.Distance(enemyPos, playerPos);
 		
-		onWall = Physics2D.IsTouchingLayers(myCollider, whatIsWall);
+		onWall = Physics2D.IsTouchingLayers(wallCollider, whatIsWall);
 		if (onWall) 
 		{ 
 			Flip ();
-		}
+		}		
 		
-		if (distance < 10) 
-		{
-			speed = 10.0f;
-		}	
-		else 
-		{
-			speed = 5.0f;
-		}
 	}
 	
 	// Flip object when encountering a wall
@@ -80,11 +80,12 @@ public class EnemyMovement : MonoBehaviour {
 			facingLeft = true;
 	}
 	
+	
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		if (other.tag == "Player") 
-			{ 
-				levelController.Respawn ();
-			}
+		{ 
+			myAnimator.SetTrigger("attack");
+		}
 	}
 }
