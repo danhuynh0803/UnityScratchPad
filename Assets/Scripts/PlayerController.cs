@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 
 	private AimMouse aim; 
 	
-	private bool facingRight = true; 			// For determining direction player is facing 
+	public bool facingRight = true; 			// For determining direction player is facing 
 	public float speed = 10.0f; 				// Speed of movement
 	public float jumpForce = 10.0f; 			// How high player can jump 
 	public bool grounded;						// Check if player is grounded
@@ -83,12 +83,13 @@ public class PlayerController : MonoBehaviour
 		} 
 		animator.SetBool ("isGrounded", grounded); 
 		
-		
+		/*
 		// Fire projectile towards mouse button
 		if(Input.GetButtonDown("Fire1"))
 		{ 
-			aim.Fire(); 
-		} 	
+			// Fire shot
+		} 
+		*/	
 	}
 	
 	void Jump() 

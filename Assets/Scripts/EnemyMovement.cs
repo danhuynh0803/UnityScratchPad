@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour {
 
-	public float speed = 5.0f;  				// Control enemy movement speed
+	public float speed;  				// Control enemy movement speed
 	private Animator myAnimator;  				// Control animations 
 	public bool facingLeft = true; 				// Check if facing left
 	
@@ -57,15 +57,6 @@ public class EnemyMovement : MonoBehaviour {
 		{ 
 			Flip ();
 		}
-		
-		if (distance < 10) 
-		{
-			speed = 10.0f;
-		}	
-		else 
-		{
-			speed = 5.0f;
-		}
 	}
 	
 	// Flip object when encountering a wall
@@ -78,13 +69,5 @@ public class EnemyMovement : MonoBehaviour {
 			facingLeft = false; 
 		else 
 			facingLeft = true;
-	}
-	
-	void OnTriggerEnter2D(Collider2D other) 
-	{
-		if (other.tag == "Player") 
-			{ 
-				levelController.Respawn ();
-			}
 	}
 }

@@ -14,9 +14,12 @@ public class LevelController : MonoBehaviour {
 	public GameObject deathParticle; 
 	public GameObject respawnParticle;
 	
+	PlayerHealth playerHealth; 
+	
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController>();
+		playerHealth = FindObjectOfType<PlayerHealth>();
 	}
 	
 	// Update is called once per frame
@@ -40,7 +43,8 @@ public class LevelController : MonoBehaviour {
 		player.GetComponent<Renderer>().enabled = true; 
 		player.transform.position = playerSpawnPoint.transform.position;
 		Instantiate(respawnParticle, playerSpawnPoint.transform.position, playerSpawnPoint.transform.rotation);	
-	
+		playerHealth.currentHealth = 100;
+		playerHealth.healthSlider.value = playerHealth.currentHealth; 
 	}
 	
 	public void waitDelay() 

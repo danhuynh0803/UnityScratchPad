@@ -58,8 +58,16 @@ public class GrabItem : MonoBehaviour {
 	}
 	
 	void Throw() 
-	{
+	{	
+		float direction = 0;
+		if (player.facingRight == true)
+			direction = 1; 
+		else 
+			direction = -1;
 		
+		Vector2 launch = new Vector2(direction * speed * Mathf.Cos(angle),
+									  speed * Mathf.Sin (angle)); 
+									  
 		hasItem = false;
 	}
 }
