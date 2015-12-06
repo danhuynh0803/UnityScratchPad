@@ -3,22 +3,25 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreController : MonoBehaviour {
-
-	public GUIText scoreTotal; 
-	private int score = 0; 
+ 
+	private static int score;
 	
-	// Use this for initialization
+	Text text; 
+
 	void Start () {
+		text = GetComponent<Text>();
 		
+		// Reset score
+		score = 0; 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		scoreTotal.text = "Score: " + score; 
+		text.text = "Score:" + score; 
 	}
 	
-	void addScore(int score)
+	void addScore(int value)
 	{
-		this.score += score; 
+		score += value; 
 	}
 }

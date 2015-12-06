@@ -50,6 +50,7 @@
      <Compile Include="Assets\LiquidPhysics\Scripts\ParticleGenerator.cs" />
      <Compile Include="Assets\Orc Warrior\Scripts\MouseController.cs" />
      <Compile Include="Assets\Scripts\AimMouse.cs" />
+     <Compile Include="Assets\Scripts\AimPlayer.cs" />
      <Compile Include="Assets\Scripts\ApplyGrav.cs" />
      <Compile Include="Assets\Scripts\Bandaid.cs" />
      <Compile Include="Assets\Scripts\Barnacle Controller.cs" />
@@ -71,7 +72,6 @@
      <Compile Include="Assets\Scripts\KillProjectile.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\OrcDamage.cs" />
-     <Compile Include="Assets\Scripts\PlatformController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\ProjectileController.cs" />
