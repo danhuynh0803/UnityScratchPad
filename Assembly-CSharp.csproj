@@ -51,6 +51,7 @@
      <Compile Include="Assets\Orc Warrior\Scripts\MouseController.cs" />
      <Compile Include="Assets\Scripts\AimMouse.cs" />
      <Compile Include="Assets\Scripts\ApplyGrav.cs" />
+     <Compile Include="Assets\Scripts\Bandaid.cs" />
      <Compile Include="Assets\Scripts\Barnacle Controller.cs" />
      <Compile Include="Assets\Scripts\BossController.cs" />
      <Compile Include="Assets\Scripts\BossMovement.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\ProjectileController.cs" />
+     <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\SpringController.cs" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_hud.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_players.xml" />
