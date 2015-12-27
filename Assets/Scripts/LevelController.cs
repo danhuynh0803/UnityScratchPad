@@ -6,9 +6,6 @@ public class LevelController : MonoBehaviour {
 	public float respawnDelay = 5.0f; 
 	
 	public GameObject playerSpawnPoint;
-	public GameObject sawSpawnPoint; 
-	public GameObject flySpawnPoint;
-	
 	private PlayerController player;
 	
 	public GameObject deathParticle; 

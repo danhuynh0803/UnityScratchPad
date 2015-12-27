@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_WEBPLAYER;ENABLE_SUBSTANCE;WEBPLUG;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -52,31 +52,33 @@
      <Compile Include="Assets\Scripts\AimMouse.cs" />
      <Compile Include="Assets\Scripts\AimPlayer.cs" />
      <Compile Include="Assets\Scripts\ApplyGrav.cs" />
-     <Compile Include="Assets\Scripts\Bandaid.cs" />
      <Compile Include="Assets\Scripts\Barnacle Controller.cs" />
-     <Compile Include="Assets\Scripts\BossController.cs" />
-     <Compile Include="Assets\Scripts\BossMovement.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Chaining.cs" />
      <Compile Include="Assets\Scripts\DestroyPlatform.cs" />
-     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\EnemyDeath.cs" />
-     <Compile Include="Assets\Scripts\EnemyManager.cs" />
-     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\GrabItem.cs" />
-     <Compile Include="Assets\Scripts\GravityObjects.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyDeath.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\FlyMovement.cs" />
+     <Compile Include="Assets\Scripts\ItemManager.cs" />
      <Compile Include="Assets\Scripts\KillParticle.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\KillProjectile.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\OrcDamage.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\GrabItem.cs" />
+     <Compile Include="Assets\Scripts\Player\HurtEnemyOnContact.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\ProjectileController.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\SpringController.cs" />
+     <Compile Include="Assets\Scripts\TrackingSystem.cs" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_hud.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_players.xml" />
      <None Include="Assets\PlatformerAssets\Spritesheets\spritesheet_ground.xml" />

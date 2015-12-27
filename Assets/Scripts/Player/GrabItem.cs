@@ -21,26 +21,26 @@ public class GrabItem : MonoBehaviour {
 		{
 			itemRB.transform.position = this.transform.position; 
 		}
-	}
-	
-	void OnTriggerStay2D(Collider2D item) 
-	{
-		if (Input.GetKeyDown(KeyCode.Z))
-		{
-			if (item.tag == "Item" && hasItem == false)
-			{
-				PickUp(item);
-			}
-		}
-		else if (Input.GetMouseButtonDown(0))
+		
+		if (Input.GetMouseButtonDown(0))
 		{
 			Throw();
 		}
 		
 		else if (Input.GetMouseButtonDown(1)) 
 		{
-			Drop(item);
+			Drop();
 		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D item) 
+	{
+		if (item.tag == "Item" && hasItem == false)
+		{
+			PickUp(item);
+		}
+
+		
 	}
 	
 	void PickUp(Collider2D item) 
@@ -52,7 +52,7 @@ public class GrabItem : MonoBehaviour {
 	}
 	
 	// Drop item at currect position
-	void Drop(Collider2D item) 
+	void Drop()
 	{
 		hasItem = false; 
 	}

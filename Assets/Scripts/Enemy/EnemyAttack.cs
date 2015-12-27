@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 
-	public float timeBetweenAttacks = 0.5f;     // The time in seconds between each attack.
+	public float timeBetweenAttacks = 2.0f;     // The time in seconds between each attack.
 	public int attackDamage = 10;               // The amount of health taken away per attack.
 	
 	
@@ -22,7 +22,7 @@ public class EnemyAttack : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent <PlayerHealth> ();
 //		enemyHealth = GetComponent<EnemyHealth>();
-		anim = GetComponent <Animator> ();
+//		anim = GetComponent <Animator> ();
 		render = player.GetComponent<SpriteRenderer> (); 
 	}
 	
@@ -72,7 +72,7 @@ public class EnemyAttack : MonoBehaviour {
 		if(playerHealth.currentHealth <= 0)
 		{
 			// ... tell the animator the player is dead.
-			anim.SetTrigger ("PlayerDead");
+			// anim.SetTrigger ("PlayerDead");
 		}
 	}
 	

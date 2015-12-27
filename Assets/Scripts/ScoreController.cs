@@ -20,7 +20,7 @@ public class ScoreController : MonoBehaviour {
 		text.text = "Score:" + score; 
 	}
 	
-	void addScore(int value)
+	public static void AddScore(int value)
 	{
 		score += value; 
 	}

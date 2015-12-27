@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour {
-
-	public float speed;  				// Control enemy movement speed
+public class FlyMovement : MonoBehaviour {
+	public float speed;  						// Control enemy movement speed
 	private Animator myAnimator;  				// Control animations 
 	public bool facingLeft = true; 				// Check if facing left
 	
@@ -16,13 +15,11 @@ public class EnemyMovement : MonoBehaviour {
 	Vector3 playerPos; 							// Player position
 	Vector3 enemyPos; 							// Enemy position 
 	float distance;								// Distance from player and enemy 
-
+	
 	PlayerController player; 
 	LevelController levelController; 
 	
-	 
-	
-	// Use this for initialization
+
 	void Start() 
 	{
 		myRigidBody = GetComponent<Rigidbody2D> (); 
@@ -35,17 +32,10 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void FixedUpdate () 
 	{
-		if (facingLeft) { 
-			h = -1; 	
-		} 
-		else {
-			h = 1;
-		}
-		Vector3 movement = new Vector3 (h*speed, transform.position.y, transform.position.z); 
-		myRigidBody.velocity = movement; 
+		Move ();
 	}
 	
-	// Update is called once per frame
+
 	void Update() 
 	{
 		enemyPos = GetComponent<Transform>().position;
@@ -57,6 +47,19 @@ public class EnemyMovement : MonoBehaviour {
 		{ 
 			Flip ();
 		}
+	}
+	
+	void Move() 
+	{
+		if (facingLeft) { 
+			h = -1; 	
+		} 
+		else {
+			h = 1;
+		}
+		Vector3 movement = new Vector3 (h*speed, transform.position.y*Mathf.Cos(Time.time * 60), transform.position.z); 
+		transform.position += movement;
+	
 	}
 	
 	// Flip object when encountering a wall
